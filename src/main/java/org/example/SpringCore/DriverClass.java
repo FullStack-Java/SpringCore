@@ -7,6 +7,7 @@ public class DriverClass {
 
     public static void main(String[] args) {
         /**
+         *
          * We have dependencies on right and left side.
          * To get rid of the dependencies of the left side, we
          * introduce the concept of interfaces.
@@ -26,6 +27,7 @@ public class DriverClass {
 
 
         /**
+         * https://www.baeldung.com/spring-contextannotation-contextcomponentscan
          * the method get bean comes from two interfaces
          * BeanFactory
          * ApplicationContext
@@ -36,8 +38,15 @@ public class DriverClass {
          */
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        Vehicle bikey = (Vehicle) context.getBean("vehicle");
-        bikey.drive();
+//        Vehicle bikey = (Vehicle) context.getBean("vehicle");
+//        bikey.drive();
+
+        /**
+         * We can also use annotation based configuration
+         * this will be done using tbe motor bike example.
+         */
+        Vehicle mBikey = (Vehicle)context.getBean("motorbike");
+        mBikey.drive();
 
     }
 }

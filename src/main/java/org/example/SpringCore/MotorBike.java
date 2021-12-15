@@ -10,5 +10,4 @@ public class MotorBike implements Vehicle {
     public void drive() {
         System.out.println("Motor Bike Annotations");
     }
-
 }

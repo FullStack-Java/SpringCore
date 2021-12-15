@@ -45,8 +45,13 @@ public class DriverClass {
          * We can also use annotation based configuration
          * this will be done using tbe motor bike example.
          */
-        Vehicle mBikey = (Vehicle)context.getBean("motorbike");
-        mBikey.drive();
+//        Vehicle mBike = (Vehicle)context.getBean("motorbike");
+//        mBike.drive();
 
+//        Tyre tyres = (Tyre) context.getBean("tyre");
+//        System.out.println(tyres);
+
+        Car hunda = (Car)context.getBean("car");
+        hunda.drive();
     }
 }
